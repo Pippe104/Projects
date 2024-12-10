@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.1
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Creato il: Dic 10, 2024 alle 08:27
+- Versione del server: 10.4.32-MariaDB
+- Versione PHP: 8.2.12
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="prova1" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="account">
+                CREATE TABLE `account` (
+                  `idAccount` int(11) NOT NULL,
+                  `nomeAccount` varchar(255) NOT NULL,
+                  `piattaforma` varchar(255) NOT NULL,
+                  `dataCreazione` date NOT NULL,
+                  `followerTotal` int(11) NOT NULL,
+                  PRIMARY KEY (`idAccount`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="posts">
+                CREATE TABLE `posts` (
+                  `idPost` int(11) NOT NULL,
+                  `idAccount` int(11) NOT NULL,
+                  `like` int(11) NOT NULL,
+                  `commenti` int(11) NOT NULL,
+                  `condivisioni` int(11) NOT NULL,
+                  `data` date NOT NULL,
+                  PRIMARY KEY (`idPost`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'prova1'
+    -->
+    <database name="prova1">
+        <!-- Tabella account -->
+        <!-- Tabella posts -->
+    </database>
+</pma_xml_export>
